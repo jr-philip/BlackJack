@@ -2,7 +2,6 @@ let player = { // creating objects which are inter-connected
     name: "Phil",// the name and chip keys while  "phil " and 145 are values
     chip: 145
 }
-
 let cards = [] // an array 
 let thirdCard = 0
 let wonTheGame = false
@@ -20,9 +19,11 @@ function getRadomCard() {
     let randomCard = Math.floor(Math.random() * 13) + 1 // use both the Math . floor and random method and +1 so as to start the game from 1
     if (randomCard > 10) {
         return 10
-    } else if (randomCard === 1) {
+    } 
+    else if (randomCard === 1) {
         return 11
-    } else {
+    } 
+    else {
         return randomCard
     }
 }
@@ -44,10 +45,12 @@ function renderGame() {
     }
     if (thirdCard <= 20) {
         message = " you are still in the game!!! "
-    } else if (thirdCard === 21) {
+    } 
+    else if (thirdCard === 21) {
         message = " you have won the game!! "
         wonTheGame = true
-    } else if (thirdCard > 21) {
+    } 
+    else if (thirdCard > 21) {
         message = " you have lost the game!! "
         isAlive = false
     }
