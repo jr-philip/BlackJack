@@ -26,3 +26,12 @@ function getRadomCard() {
         return randomCard
     }
 }
+
+function startGame() {
+    isAlive = true
+    let firstCard = getRadomCard()
+    let secondCard = getRadomCard()
+    cards = [firstCard, secondCard]
+    thirdCard = firstCard + secondCard
+    renderGame()
+}
