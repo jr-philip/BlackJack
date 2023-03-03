@@ -35,3 +35,21 @@ function startGame() {
     thirdCard = firstCard + secondCard
     renderGame()
 }
+
+function renderGame() {
+    sumEl.textContent = "sum: " + thirdCard
+    cardEl.textContent = "card: "
+    for (let i = 0; i < cards.length; i++) {  // these is how to for loop
+        cardEl.textContent += cards[i] + " "
+    }
+    if (thirdCard <= 20) {
+        message = " you are still in the game!!! "
+    } else if (thirdCard === 21) {
+        message = " you have won the game!! "
+        wonTheGame = true
+    } else if (thirdCard > 21) {
+        message = " you have lost the game!! "
+        isAlive = false
+    }
+    messageEl.textContent = message
+}
