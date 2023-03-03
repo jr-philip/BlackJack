@@ -53,3 +53,12 @@ function renderGame() {
     }
     messageEl.textContent = message
 }
+
+function newCard() {
+    if (isAlive === true && wonTheGame === false) { //using the and(&&) operator
+        let newHard = getRadomCard()
+        thirdCard += newHard
+        cards.push(newHard) //push is a method of pushing an item to an existing array
+        renderGame()
+    }
+}
