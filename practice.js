@@ -22,19 +22,7 @@
 // //     console.log(people[i])
 // // }
 
-let play2Time = 107
-let play1Time = 102
 
-function letsPlay() {
-    if (play1Time > play2Time) {
-        return play1Time
-    } else if (play2Time > play1Time) {
-        return play2Time
-    } else {
-        return play1Time
-    }
-
-}
 // let mePlay= letsPlay()
 // console.log(mePlay)
 
